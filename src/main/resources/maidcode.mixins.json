@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "com.gly091020.MaidCode.mixin",
+  "client": [
+    "ConfigMixin"
+  ],
+  "compatibilityLevel": "JAVA_21",
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "config.maidcode.title_in_mod": "[Maid Code] Settings",
+  "config.maidcode.title": "Maid Code Settings",
+  "config.maidcode.enable": "Enable Mod",
+  "config.maidcode.is_gly_mode": "Refuse service for 5112151111121",
+  "config.maidcode.is_gly_mode.tip": "Admit you're noob and let maids program for you",
+  "config.maidcode.find_size": "Computer Search Range",
+  "config.maidcode.find_size.block": "%s blocks"
+}
