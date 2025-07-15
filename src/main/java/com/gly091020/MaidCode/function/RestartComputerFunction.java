@@ -13,6 +13,7 @@ import dan200.computercraft.shared.computer.blocks.ComputerBlockEntity;
 import net.minecraft.core.BlockPos;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class RestartComputerFunction implements IFunctionCall<RestartComputerFunction.Result> {
     // ID不能有冒号!!!!!!!!!!!!!!!!!!!!!!!!
@@ -68,13 +69,14 @@ public class RestartComputerFunction implements IFunctionCall<RestartComputerFun
                 return new ToolResponse("对应坐标电脑未初始化");
             }
             var c = computerBlock.getServerComputer();
-            switch (result.mode){
-                case "open" -> c.turnOn();
-                case "close" -> c.close();
-                case "reboot" -> c.reboot();
-                default -> {
-                    return new ToolResponse("未知操作");
-                }
+            if(Objects.equals(result.mode, "open")){
+                c.turnOn();
+            } else if (Objects.equals(result.mode, "close")) {
+                c.close();
+            } else if (Objects.equals(result.mode, "reboot")) {
+                c.reboot();
+            }else{
+                return new ToolResponse("无效操作");
             }
         }else{
             return new ToolResponse("对应坐标不是电脑");
