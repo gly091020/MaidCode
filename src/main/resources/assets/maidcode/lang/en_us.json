@@ -13,5 +13,17 @@
   "config.maidcode.fun_config.maid_get_computer_pos": "Get nearby computer positions",
   "config.maidcode.fun_config.maid_programming": "Program computer blocks",
   "config.maidcode.fun_config.maid_restart_computer": "Power operations on computers",
-  "config.maidcode.fun_config.maid_set_computer_label": "Set computer labels"
+  "config.maidcode.fun_config.maid_set_computer_label": "Set computer labels",
+
+  "patchouli.maidcode.book.categories.maid.name": "Maid Code",
+  "patchouli.maidcode.book.categories.maid.description": "Beginner's Guide to Maid Code Mod$(br2)(Do people really have maids write code in their Minecraft world?)",
+  "patchouli.maidcode.book.entries.maid.how_to_use.name": "How to Use?",
+  "patchouli.maidcode.book.entries.maid.how_to_use.text.1": "This mod is powered by the maid AI conversation system, allowing maids to program computers through function calls.$(br2)Before use, ensure the maid's AI chat function calling feature is enabled.$(br)Simply mention \"computer\" in chat, and the maid will locate nearby computers to program.$(br2)All available functions can be viewed in the mod configuration interface.",  "patchouli.maidcode.book.entries.maid.config.name": "Disabling Certain Features",
+  "patchouli.maidcode.book.entries.maid.config.text.1": "If you feel too many features are consuming AI Tokens, you can disable some.$(br2)You can adjust this mod's configuration in either Maid Code or the main Touhou Little Maid settings.$(br)The configuration interface allows enabling/disabling each FunctionCall (feature).",
+  "patchouli.maidcode.book.entries.maid.help_to_code.name": "Code Problems!",
+  "patchouli.maidcode.book.entries.maid.help_to_code.text.1": "If the computer mod's code isn't working, you can have the maid fix it,$(br)or manually modify it by consulting the computer mod's wiki.",
+  "patchouli.maidcode.book.entries.overview.help_to_code.pages.1.link_text": "CC: Tweaked Official Wiki",
+  "patchouli.maidcode.book.entries.maid.help_to_code.text.2": "If it's a bug in the author's mod,$(m)you can also have the maid fix it$() or report it to the author's GitHub.",
+  "patchouli.maidcode.book.entries.overview.help_to_code.pages.2.link_text": "GitHub Repository",
+  "patchouli.maidcode.book.entries.maid.how_to_use.pages.2.text": "We must believe she is happy"
 }

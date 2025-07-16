@@ -1,0 +1,12 @@
+{
+  "sortnum": 2,
+  "name": "patchouli.maidcode.book.entries.maid.config.name",
+  "icon": "minecraft:compass",
+  "category": "touhou_little_maid:maidcode",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "patchouli.maidcode.book.entries.maid.config.text.1"
+    }
+  ]
+}

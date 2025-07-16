@@ -1,0 +1,20 @@
+{
+  "sortnum": 3,
+  "name": "patchouli.maidcode.book.entries.maid.help_to_code.name",
+  "icon": "minecraft:feather",
+  "category": "touhou_little_maid:maidcode",
+  "pages": [
+    {
+      "type": "link",
+      "text": "patchouli.maidcode.book.entries.maid.help_to_code.text.1",
+      "url": "https://tweaked.cc/",
+      "link_text": "patchouli.maidcode.book.entries.overview.help_to_code.pages.1.link_text"
+    },
+    {
+      "type": "link",
+      "text": "patchouli.maidcode.book.entries.maid.help_to_code.text.2",
+      "url": "https://github.com/gly091020/MaidCode/issues",
+      "link_text": "patchouli.maidcode.book.entries.overview.help_to_code.pages.2.link_text"
+    }
+  ]
+}

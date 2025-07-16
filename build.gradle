@@ -125,6 +125,7 @@ dependencies {
     implementation "curse.maven:touhou-little-maid-355044:6657437"
     implementation files("libs/cc_tweaked-1.21.1-1.116.1.jar")
     implementation "curse.maven:cloth-config-348521:5623420"
+    runtimeOnly "curse.maven:patchouli-306770:6164617"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

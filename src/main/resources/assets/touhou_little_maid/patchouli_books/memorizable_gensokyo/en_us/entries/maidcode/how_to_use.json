@@ -1,0 +1,19 @@
+{
+  "sortnum": 1,
+  "name": "patchouli.maidcode.book.entries.maid.how_to_use.name",
+  "icon": "computercraft:computer_advanced",
+  "category": "touhou_little_maid:maidcode",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "patchouli.maidcode.book.entries.maid.how_to_use.text.1"
+    },
+    {
+      "type": "image",
+      "images": [
+        "maidcode:textures/book1.png"
+      ],
+      "text": "patchouli.maidcode.book.entries.maid.how_to_use.pages.2.text"
+    }
+  ]
+}

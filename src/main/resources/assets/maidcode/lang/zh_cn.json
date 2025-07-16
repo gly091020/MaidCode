@@ -13,5 +13,18 @@
   "config.maidcode.fun_config.maid_get_computer_pos": "获取周围电脑位置",
   "config.maidcode.fun_config.maid_programming": "对电脑方块编程",
   "config.maidcode.fun_config.maid_restart_computer": "对电脑进行电源操作",
-  "config.maidcode.fun_config.maid_set_computer_label": "设置电脑标签"
+  "config.maidcode.fun_config.maid_set_computer_label": "设置电脑标签",
+
+  "patchouli.maidcode.book.categories.maid.name": "女仆网管",
+  "patchouli.maidcode.book.categories.maid.description": "女仆网管模组入门指南$(br2)（真的有人在我的世界里让女仆帮忙写代码吗？）",
+  "patchouli.maidcode.book.entries.maid.how_to_use.name": "怎么用？",
+  "patchouli.maidcode.book.entries.maid.how_to_use.text.1": "本模组由女仆AI对话功能驱动，女仆可通过调用函数来对电脑进行编程。$(br2)使用前请先保证打开了女仆的AI聊天函数调用功能。$(br)只需要在聊天时提到“电脑”，女仆就会寻找周围的电脑并进行编程。$(br2)所有功能可以在模组配置界面查看",
+  "patchouli.maidcode.book.entries.maid.config.name": "关闭一些功能",
+  "patchouli.maidcode.book.entries.maid.config.text.1": "如果你觉得功能过多消耗AI Token，可以关闭一些功能。$(br2)女仆网管或车万女仆本体设置里可以调整此模组的配置。$(br)在配置界面可以打开/关闭每一个FunctionCall（功能）。",
+  "patchouli.maidcode.book.entries.maid.help_to_code.name": "代码出问题了！",
+  "patchouli.maidcode.book.entries.maid.help_to_code.text.1": "如果是电脑模组的代码无法运行，可以让女仆改正，$(br)或者查阅电脑模组wiki进行人工修改。",
+  "patchouli.maidcode.book.entries.overview.help_to_code.pages.1.link_text": "CC: Tweaked官方Wiki",
+  "patchouli.maidcode.book.entries.maid.help_to_code.text.2": "如果是作者的模组bug，$(m)也可以让女仆修$()可以报告到作者的github上。",
+  "patchouli.maidcode.book.entries.overview.help_to_code.pages.2.link_text": "Github仓库",
+  "patchouli.maidcode.book.entries.maid.how_to_use.pages.2.text": "我们要相信她是快乐的"
 }
