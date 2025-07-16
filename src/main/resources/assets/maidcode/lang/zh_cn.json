@@ -5,5 +5,13 @@
   "config.maidcode.is_gly_mode": "拒绝为5112151111121服务",
   "config.maidcode.is_gly_mode.tip": "承认自己很菜并让女仆为你编程",
   "config.maidcode.find_size": "寻找电脑范围",
-  "config.maidcode.find_size.block": "%s格"
+  "config.maidcode.find_size.block": "%s格",
+  "config.maidcode.fun_config.enable": "启用",
+  "config.maidcode.fun_config.disable": "禁用",
+  "config.maidcode.fun_config": "FunctionCall 设置",
+  "config.maidcode.fun_config.tip": "控制女仆可以使用的功能",
+  "config.maidcode.fun_config.maid_get_computer_pos": "获取周围电脑位置",
+  "config.maidcode.fun_config.maid_programming": "对电脑方块编程",
+  "config.maidcode.fun_config.maid_restart_computer": "对电脑进行电源操作",
+  "config.maidcode.fun_config.maid_set_computer_label": "设置电脑标签"
 }

@@ -5,5 +5,13 @@
   "config.maidcode.is_gly_mode": "Refuse service for 5112151111121",
   "config.maidcode.is_gly_mode.tip": "Admit you're noob and let maids program for you",
   "config.maidcode.find_size": "Computer Search Range",
-  "config.maidcode.find_size.block": "%s blocks"
+  "config.maidcode.find_size.block": "%s blocks",
+  "config.maidcode.fun_config.enable": "Enable",
+  "config.maidcode.fun_config.disable": "Disable",
+  "config.maidcode.fun_config": "FunctionCall Settings",
+  "config.maidcode.fun_config.tip": "Control the functions maids can use",
+  "config.maidcode.fun_config.maid_get_computer_pos": "Get nearby computer positions",
+  "config.maidcode.fun_config.maid_programming": "Program computer blocks",
+  "config.maidcode.fun_config.maid_restart_computer": "Power operations on computers",
+  "config.maidcode.fun_config.maid_set_computer_label": "Set computer labels"
 }

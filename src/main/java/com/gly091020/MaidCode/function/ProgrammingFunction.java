@@ -7,11 +7,12 @@ import com.github.tartaricacid.touhoulittlemaid.ai.service.function.schema.param
 import com.github.tartaricacid.touhoulittlemaid.ai.service.function.schema.parameter.Parameter;
 import com.github.tartaricacid.touhoulittlemaid.ai.service.function.schema.parameter.StringParameter;
 import com.github.tartaricacid.touhoulittlemaid.entity.passive.EntityMaid;
-import com.gly091020.MaidCode.MaidCode;
+import com.gly091020.MaidCode.MaidFunctions;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import dan200.computercraft.shared.computer.blocks.ComputerBlockEntity;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.block.GameMasterBlock;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -19,6 +20,8 @@ import java.nio.channels.SeekableByteChannel;
 import java.nio.file.StandardOpenOption;
 import java.util.Arrays;
 import java.util.Set;
+
+import static com.gly091020.MaidCode.MaidFunctions.isOP;
 
 public class ProgrammingFunction implements IFunctionCall<ProgrammingFunction.Result> {
     public static final String ID = "maid_programming";
@@ -59,8 +62,8 @@ public class ProgrammingFunction implements IFunctionCall<ProgrammingFunction.Re
 
     @Override
     public ToolResponse onToolCall(Result result, EntityMaid maid) {
-        if(MaidCode.isGLYMaid(maid)){
-            return new ToolResponse(MaidCode.noGLY);
+        if(MaidFunctions.isGLYMaid(maid)){
+            return new ToolResponse(MaidFunctions.noGLY);
         }
         var l = Arrays.stream(result.pos.split(",")).toList();
         if(l.size() != 3){
@@ -75,6 +78,9 @@ public class ProgrammingFunction implements IFunctionCall<ProgrammingFunction.Re
 
         if (!(maid.level().getBlockEntity(p) instanceof ComputerBlockEntity computerBlock)) {
             return new ToolResponse("对应坐标不是电脑");
+        }
+        if(maid.level().getBlockState(p).getBlock() instanceof GameMasterBlock && !isOP(maid)){
+            return new ToolResponse("这是一台命令电脑，你的主人没有管理员权限");
         }
         if(computerBlock.getServerComputer() == null){
             return new ToolResponse("对应坐标电脑未初始化");
