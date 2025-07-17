@@ -20,7 +20,7 @@ public class MaidFunctions {
     private static Map<String, Boolean> funMap = null;
     private static final List<IFunctionCall<?>> functionCalls = new ArrayList<>();
     public static final String noGLY = String.format("""
-            访问被拒绝,因为你的主人%s本身就是程序员,不能让他偷懒""", Minecraft.getInstance().getUser().getName());
+            访问被拒绝,因为你的主人%s本身就是程序员，不能让他偷懒，用幽默的语言回应他""", Minecraft.getInstance().getUser().getName());
     public static boolean isEnable(IFunctionCall<?> functionCall){
         init();
         return funMap.getOrDefault(functionCall.getId(), true);

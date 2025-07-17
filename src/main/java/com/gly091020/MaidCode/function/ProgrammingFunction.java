@@ -7,7 +7,9 @@ import com.github.tartaricacid.touhoulittlemaid.ai.service.function.schema.param
 import com.github.tartaricacid.touhoulittlemaid.ai.service.function.schema.parameter.Parameter;
 import com.github.tartaricacid.touhoulittlemaid.ai.service.function.schema.parameter.StringParameter;
 import com.github.tartaricacid.touhoulittlemaid.entity.passive.EntityMaid;
+import com.gly091020.MaidCode.MaidCode;
 import com.gly091020.MaidCode.MaidFunctions;
+import com.gly091020.MaidCode.task.ProgrammingTask;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import dan200.computercraft.shared.computer.blocks.ComputerBlockEntity;
@@ -62,6 +64,9 @@ public class ProgrammingFunction implements IFunctionCall<ProgrammingFunction.Re
 
     @Override
     public ToolResponse onToolCall(Result result, EntityMaid maid) {
+        if(MaidCode.CONFIG.enableTask && !(maid.getTask() instanceof ProgrammingTask)){
+            return new ToolResponse("你没有在进行编程工作，请要求主人切换工作模式为编程");
+        }
         if(MaidFunctions.isGLYMaid(maid)){
             return new ToolResponse(MaidFunctions.noGLY);
         }
@@ -75,6 +80,8 @@ public class ProgrammingFunction implements IFunctionCall<ProgrammingFunction.Re
         } catch (NumberFormatException e) {
             return new ToolResponse("坐标不是数字");
         }
+
+        maid.getBrain().setMemory(MaidCode.COMPUTER_POS_MEMORY, p);
 
         if (!(maid.level().getBlockEntity(p) instanceof ComputerBlockEntity computerBlock)) {
             return new ToolResponse("对应坐标不是电脑");

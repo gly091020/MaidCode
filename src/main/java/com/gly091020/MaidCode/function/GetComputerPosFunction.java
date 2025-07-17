@@ -5,6 +5,8 @@ import com.github.tartaricacid.touhoulittlemaid.ai.service.function.response.Too
 import com.github.tartaricacid.touhoulittlemaid.ai.service.function.schema.parameter.ObjectParameter;
 import com.github.tartaricacid.touhoulittlemaid.ai.service.function.schema.parameter.Parameter;
 import com.github.tartaricacid.touhoulittlemaid.entity.passive.EntityMaid;
+import com.gly091020.MaidCode.MaidCode;
+import com.gly091020.MaidCode.task.ProgrammingTask;
 import com.mojang.serialization.Codec;
 import dan200.computercraft.shared.computer.blocks.CommandComputerBlock;
 import dan200.computercraft.shared.computer.blocks.ComputerBlockEntity;
@@ -39,6 +41,9 @@ public class GetComputerPosFunction implements IFunctionCall<GetComputerPosFunct
 
     @Override
     public ToolResponse onToolCall(Result result, EntityMaid entityMaid) {
+        if(MaidCode.CONFIG.enableTask && !(entityMaid.getTask() instanceof ProgrammingTask)){
+            return new ToolResponse("你没有在进行编程工作，请要求主人切换工作模式为编程");
+        }
         var a = CONFIG.findComputerSize;
         var s = new StringBuilder();
         s.append(String.format("你的位置:(%d,%d,%d)", entityMaid.getBlockX(), entityMaid.getBlockY(), entityMaid.getBlockZ()));

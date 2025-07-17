@@ -24,6 +24,8 @@ public class MaidCodeConfig implements ConfigData {
     public boolean enable = true;
     public int findComputerSize = 10;
     public boolean isGLYMode = true;
+    public boolean enableTask = true;
+    public boolean enableTaskRequire = true;
     public String funListJson = "{}";
 
     public static ConfigBuilder getScreenBuilder(ConfigBuilder builder){
@@ -40,8 +42,21 @@ public class MaidCodeConfig implements ConfigData {
                 .setSaveConsumer(x -> CONFIG.findComputerSize = x)
                 .setTextGetter(x -> Component.translatable("config.maidcode.find_size.block", x))
                 .build());
-
-        var funConfig = entryBuilder.startSubCategory(Component.translatable("config.maidcode.fun_config")).setTooltip(Component.translatable("config.maidcode.fun_config.tip"));
+        var taskConfig = entryBuilder.startSubCategory(Component.translatable("config.maidcode.task_config")).setExpanded(true);
+        taskConfig.add(entryBuilder.startBooleanToggle(Component.translatable("config.maidcode.task_config.enable"), CONFIG.enableTask)
+                .setDefaultValue(true)
+                .setSaveConsumer(x -> CONFIG.enableTask = x)
+                .setTooltip(Component.translatable("config.maidcode.task_config.enable.tip"))
+                .requireRestart()
+                .build());
+        taskConfig.add(entryBuilder.startBooleanToggle(Component.translatable("config.maidcode.task_config.enable_require"), CONFIG.enableTaskRequire)
+                .setDefaultValue(true)
+                .setSaveConsumer(x -> CONFIG.enableTaskRequire = x)
+                .setTooltip(Component.translatable("config.maidcode.task_config.enable_require.tip"))
+                .build());
+        category.addEntry(taskConfig.build());
+        var funConfig = entryBuilder.startSubCategory(Component.translatable("config.maidcode.fun_config"))
+                .setTooltip(Component.translatable("config.maidcode.fun_config.tip")).setExpanded(true);
         for(IFunctionCall<?> functionCall: MaidFunctions.getFunCalls()){
             funConfig.add(entryBuilder.startBooleanToggle(Component.translatable("config.maidcode.fun_config." + functionCall.getId()),
                             MaidFunctions.isEnable(functionCall))

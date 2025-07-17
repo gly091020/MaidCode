@@ -14,6 +14,10 @@
         "maidcode:textures/book1.png"
       ],
       "text": "patchouli.maidcode.book.entries.maid.how_to_use.pages.2.text"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "patchouli.maidcode.book.entries.maid.how_to_use.text.2"
     }
   ]
 }
